@@ -1,9 +1,9 @@
-BLACKBULLSWAP CONTRACTS
+# BLACKBULLSWAP CONTRACTS
 
-CONTRACTS
+## CONTRACTS
 The 'contracts' folder contains the main contracts of Blackbullswap and artifacts.
 
-SCRIPTS
+## SCRIPTS
 
 The 'scripts' folder contains example async/await scripts for deploying the 'Storage' contract.
 For the deployment of any other contract, 'contractName' and 'constructorArgs' should be updated (along with other code if required). 
@@ -13,7 +13,7 @@ To run a script, right click on file name in the file explorer and click 'Run'. 
 
 Output from script will appear in remix terminal.
 
-OFFICIAL CONTRACTS
+## OFFICIAL CONTRACTS
 Blackbullswap Factory: 0x2996a66ebc9b5d5f91eb37f657eea2b89456d753 -> https://snowtrace.io/address/0x2996a66ebc9b5d5f91eb37f657eea2b89456d753
 Blackbullswap Router: 0x60cDC7aCa4274Ffd2A4AF0AA0f7f2aDD676F42c3 -> https://snowtrace.io/address/0x60cDC7aCa4274Ffd2A4AF0AA0f7f2aDD676F42c3
 
