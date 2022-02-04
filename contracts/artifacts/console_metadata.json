@@ -1,0 +1,40 @@
+{
+	"compiler": {
+		"version": "0.6.6+commit.6c089d02"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/BlackbullRouter.sol": "console"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/BlackbullRouter.sol": {
+			"keccak256": "0x6c614ded1ccbf664d2728adb1920a3fcbdba5da0337aaee23b296174eac64840",
+			"urls": [
+				"bzz-raw://c5f04fae80b4509d2cb665d8a744cf206f9d6847cca75a6f549732f18076783e",
+				"dweb:/ipfs/QmPMm14juX8TjhDhUrjLdzk2wb9VKXX3cBJ1mda1Z3cNzD"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,68 @@
+{
+	"compiler": {
+		"version": "0.5.16+commit.9c3226ce"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount0",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount1",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "blackbullCall",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/BlackbullFactory.sol": "IBlackbullCallee"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/BlackbullFactory.sol": {
+			"keccak256": "0xe4511689ca115ee5a7a9da2e6557e9cb166a70a4e40ba22410755b0add3bc298",
+			"urls": [
+				"bzz-raw://da1aa75a79b762e31bd6c0678836cfd2d9d32b5ea43b7d38b47c42ee12f51d59",
+				"dweb:/ipfs/QmNQVEZPb8izMkGUaDsj5xMMutuWRrz2BiWtRQLkK9N6ad"
+			]
+		}
+	},
+	"version": 1
+}
