@@ -37,6 +37,7 @@
 			"sourceMap": ""
 		},
 		"deployedBytecode": {
+			"immutableReferences": {},
 			"linkReferences": {},
 			"object": "",
 			"opcodes": "",
@@ -44,26 +45,25 @@
 		},
 		"gasEstimates": null,
 		"methodIdentifiers": {
-			"pantherCall(address,uint256,uint256,bytes)": "1c8f37b3"
+			"onERC721Received(address,address,uint256,bytes)": "150b7a02"
 		}
 	},
 	"abi": [
 		{
-			"constant": false,
 			"inputs": [
 				{
 					"internalType": "address",
-					"name": "sender",
+					"name": "operator",
+					"type": "address"
+				},
+				{
+					"internalType": "address",
+					"name": "from",
 					"type": "address"
 				},
 				{
 					"internalType": "uint256",
-					"name": "amount0",
-					"type": "uint256"
-				},
-				{
-					"internalType": "uint256",
-					"name": "amount1",
+					"name": "tokenId",
 					"type": "uint256"
 				},
 				{
@@ -72,9 +72,14 @@
 					"type": "bytes"
 				}
 			],
-			"name": "pantherCall",
-			"outputs": [],
-			"payable": false,
+			"name": "onERC721Received",
+			"outputs": [
+				{
+					"internalType": "bytes4",
+					"name": "",
+					"type": "bytes4"
+				}
+			],
 			"stateMutability": "nonpayable",
 			"type": "function"
 		}

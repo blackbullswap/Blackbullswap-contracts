@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.6.6+commit.6c089d02"
+		"version": "0.5.16+commit.9c3226ce"
 	},
 	"language": "Solidity",
 	"output": {
@@ -14,13 +14,10 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/BlackbullRouter.sol": "SafeMath"
+			"contracts/BlackbullFactory.sol": "SafeMath"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
-		"metadata": {
-			"bytecodeHash": "ipfs"
-		},
 		"optimizer": {
 			"enabled": true,
 			"runs": 200
@@ -28,11 +25,11 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/BlackbullRouter.sol": {
-			"keccak256": "0x6c614ded1ccbf664d2728adb1920a3fcbdba5da0337aaee23b296174eac64840",
+		"contracts/BlackbullFactory.sol": {
+			"keccak256": "0x4a064a1c618264f0ae1c57a263f13b3f94d000754da1b0d06aa9f1eae36bae08",
 			"urls": [
-				"bzz-raw://c5f04fae80b4509d2cb665d8a744cf206f9d6847cca75a6f549732f18076783e",
-				"dweb:/ipfs/QmPMm14juX8TjhDhUrjLdzk2wb9VKXX3cBJ1mda1Z3cNzD"
+				"bzz-raw://e83ed02bd5490245593e4bb7bd765df27e275f1026028946a1afdd22267110f1",
+				"dweb:/ipfs/QmST15dHSQZEfVcKJTUUYXTrj7U4EN4nnUNus8MKeYi1MU"
 			]
 		}
 	},

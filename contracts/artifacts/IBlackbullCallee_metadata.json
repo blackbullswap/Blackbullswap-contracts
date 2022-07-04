@@ -29,7 +29,7 @@
 						"type": "bytes"
 					}
 				],
-				"name": "blackbullCall",
+				"name": "pantherCall",
 				"outputs": [],
 				"payable": false,
 				"stateMutability": "nonpayable",
@@ -57,10 +57,10 @@
 	},
 	"sources": {
 		"contracts/BlackbullFactory.sol": {
-			"keccak256": "0xe4511689ca115ee5a7a9da2e6557e9cb166a70a4e40ba22410755b0add3bc298",
+			"keccak256": "0x4a064a1c618264f0ae1c57a263f13b3f94d000754da1b0d06aa9f1eae36bae08",
 			"urls": [
-				"bzz-raw://da1aa75a79b762e31bd6c0678836cfd2d9d32b5ea43b7d38b47c42ee12f51d59",
-				"dweb:/ipfs/QmNQVEZPb8izMkGUaDsj5xMMutuWRrz2BiWtRQLkK9N6ad"
+				"bzz-raw://e83ed02bd5490245593e4bb7bd765df27e275f1026028946a1afdd22267110f1",
+				"dweb:/ipfs/QmST15dHSQZEfVcKJTUUYXTrj7U4EN4nnUNus8MKeYi1MU"
 			]
 		}
 	},

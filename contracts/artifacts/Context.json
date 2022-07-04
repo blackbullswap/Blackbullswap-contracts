@@ -37,46 +37,14 @@
 			"sourceMap": ""
 		},
 		"deployedBytecode": {
+			"immutableReferences": {},
 			"linkReferences": {},
 			"object": "",
 			"opcodes": "",
 			"sourceMap": ""
 		},
 		"gasEstimates": null,
-		"methodIdentifiers": {
-			"pantherCall(address,uint256,uint256,bytes)": "1c8f37b3"
-		}
+		"methodIdentifiers": {}
 	},
-	"abi": [
-		{
-			"constant": false,
-			"inputs": [
-				{
-					"internalType": "address",
-					"name": "sender",
-					"type": "address"
-				},
-				{
-					"internalType": "uint256",
-					"name": "amount0",
-					"type": "uint256"
-				},
-				{
-					"internalType": "uint256",
-					"name": "amount1",
-					"type": "uint256"
-				},
-				{
-					"internalType": "bytes",
-					"name": "data",
-					"type": "bytes"
-				}
-			],
-			"name": "pantherCall",
-			"outputs": [],
-			"payable": false,
-			"stateMutability": "nonpayable",
-			"type": "function"
-		}
-	]
+	"abi": []
 }

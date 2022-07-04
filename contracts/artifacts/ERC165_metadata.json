@@ -1,0 +1,75 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "interfaceId",
+						"type": "bytes4"
+					}
+				],
+				"name": "supportsInterface",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Implementation of the {IERC165} interface. Contracts may inherit from this and call {_registerInterface} to declare their support of an interface.",
+			"kind": "dev",
+			"methods": {
+				"supportsInterface(bytes4)": {
+					"details": "See {IERC165-supportsInterface}. Time complexity O(1), guaranteed to always use less than 30 000 gas."
+				}
+			},
+			"stateVariables": {
+				"_supportedInterfaces": {
+					"details": "Mapping of interface ids to whether or not it's supported."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/LotteryNFT.sol": "ERC165"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/LotteryNFT.sol": {
+			"keccak256": "0xeebb9b5fa88f4e80afefa098514e95741db5be0bad9c8199b5d926288c06a60c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://806f57549ccbf604f1c1d11e9586e830e3ffb029f353623042f1b43f32b9997b",
+				"dweb:/ipfs/QmQBdmei6f9a8XLg6Vs4VAfXhFgaiv63Nqe5F7NtVyrwKh"
+			]
+		}
+	},
+	"version": 1
+}

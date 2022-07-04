@@ -37,6 +37,7 @@
 			"sourceMap": ""
 		},
 		"deployedBytecode": {
+			"immutableReferences": {},
 			"linkReferences": {},
 			"object": "",
 			"opcodes": "",
@@ -44,38 +45,27 @@
 		},
 		"gasEstimates": null,
 		"methodIdentifiers": {
-			"pantherCall(address,uint256,uint256,bytes)": "1c8f37b3"
+			"supportsInterface(bytes4)": "01ffc9a7"
 		}
 	},
 	"abi": [
 		{
-			"constant": false,
 			"inputs": [
 				{
-					"internalType": "address",
-					"name": "sender",
-					"type": "address"
-				},
-				{
-					"internalType": "uint256",
-					"name": "amount0",
-					"type": "uint256"
-				},
-				{
-					"internalType": "uint256",
-					"name": "amount1",
-					"type": "uint256"
-				},
-				{
-					"internalType": "bytes",
-					"name": "data",
-					"type": "bytes"
+					"internalType": "bytes4",
+					"name": "interfaceId",
+					"type": "bytes4"
 				}
 			],
-			"name": "pantherCall",
-			"outputs": [],
-			"payable": false,
-			"stateMutability": "nonpayable",
+			"name": "supportsInterface",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
 			"type": "function"
 		}
 	]
