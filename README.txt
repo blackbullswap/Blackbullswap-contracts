@@ -14,7 +14,33 @@ To run a script, right click on file name in the file explorer and click 'Run'. 
 Output from script will appear in remix terminal.
 
 ## OFFICIAL CONTRACTS
-Blackbullswap Factory: 0x2996a66ebc9b5d5f91eb37f657eea2b89456d753 -> https://snowtrace.io/address/0x2996a66ebc9b5d5f91eb37f657eea2b89456d753
-Blackbullswap Router: 0x60cDC7aCa4274Ffd2A4AF0AA0f7f2aDD676F42c3 -> https://snowtrace.io/address/0x60cDC7aCa4274Ffd2A4AF0AA0f7f2aDD676F42c3
 
-Blackbull Token (BBULL): 0x9eF7c46dd224Fd6CDF7e33928eAF2eAf71a5eEcd -> https://snowtrace.io/address/0x9eF7c46dd224Fd6CDF7e33928eAF2eAf71a5eEcd
+BLACKBULL FARM CONTRACTS: 
+
+Bull Token contract address: 0x60A6438D893c5Cc59aa8b599Fbc9FFa2F4B07a2d
+
+https://snowtrace.io/address/0x60a6438d893c5cc59aa8b599fbc9ffa2f4b07a2d#code
+
+Bull Bar Token contract address: 0xB0cC4646C65D50f4BD8705BDC85a7b12E01d586A
+
+https://snowtrace.io/address/0xb0cc4646c65d50f4bd8705bdc85a7b12e01d586a#code
+
+MasterChef contract address:
+
+0x64446bb2AA9964d730bfe8c185dA4e189A717a97
+
+https://snowtrace.io/address/0x64446bb2aa9964d730bfe8c185da4e189a717a97#code
+
+BLACKBULLSWAP DEX CONTRACTS:
+
+Factory contract address: 0x15dE32a0842Ce2335Ef6C33F1643afB1a81c4738
+
+https://snowtrace.io/address/0x15dE32a0842Ce2335Ef6C33F1643afB1a81c4738#code
+
+Router contract address: 0x0e0bAfF10DdD4D209CE1C9270B72eB4C9C478122
+
+https://snowtrace.io/address/0x0e0baff10ddd4d209ce1c9270b72eb4c9c478122#code
+
+Multicall contract address: 0xa2eD6274258d4315e4D43325E5e9E82c87feAea1
+
+https://snowtrace.io/address/0xa2ed6274258d4315e4d43325e5e9e82c87feaea1#code
