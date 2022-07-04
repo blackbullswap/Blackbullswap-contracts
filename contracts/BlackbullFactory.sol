@@ -1,12 +1,11 @@
 /**
- *Submitted for verification at snowtrace.io on 2021-11-02
+ *Submitted for verification at snowtrace.io on 2022-02-28
 */
 
-// Sources flattened with hardhat v2.0.6 https://hardhat.org
+// SPDX-License-Identifier: MIT
 
-// File contracts/blackbull-core/interfaces/IBlackbullFactory.sol
+pragma solidity =0.5.16;
 
-pragma solidity >=0.5.0;
 
 interface IBlackbullFactory {
     event PairCreated(address indexed token0, address indexed token1, address pair, uint);
@@ -23,11 +22,6 @@ interface IBlackbullFactory {
     function setFeeTo(address) external;
     function setFeeToSetter(address) external;
 }
-
-
-// File contracts/blackbull-core/interfaces/IBlackbullPair.sol
-
-pragma solidity >=0.5.0;
 
 interface IBlackbullPair {
     event Approval(address indexed owner, address indexed spender, uint value);
@@ -80,11 +74,6 @@ interface IBlackbullPair {
     function initialize(address, address) external;
 }
 
-
-// File contracts/blackbull-core/interfaces/IBlackbullERC20.sol
-
-pragma solidity >=0.5.0;
-
 interface IBlackbullERC20 {
     event Approval(address indexed owner, address indexed spender, uint value);
     event Transfer(address indexed from, address indexed to, uint value);
@@ -107,13 +96,7 @@ interface IBlackbullERC20 {
     function permit(address owner, address spender, uint value, uint deadline, uint8 v, bytes32 r, bytes32 s) external;
 }
 
-
-// File contracts/blackbull-core/libraries/SafeMath.sol
-
-pragma solidity =0.5.16;
-
 // a library for performing overflow-safe math, courtesy of DappHub (https://github.com/dapphub/ds-math)
-
 library SafeMath {
     function add(uint x, uint y) internal pure returns (uint z) {
         require((z = x + y) >= x, 'ds-math-add-overflow');
@@ -128,17 +111,11 @@ library SafeMath {
     }
 }
 
-
-// File contracts/blackbull-core/BlackbullERC20.sol
-
-pragma solidity =0.5.16;
-
-
 contract BlackbullERC20 is IBlackbullERC20 {
     using SafeMath for uint;
 
-    string public constant name = 'Blackbull Liquidity';
-    string public constant symbol = 'PGL';
+    string public constant name = 'BlackbullSwap LPs';
+    string public constant symbol = 'BLACKBULL-LP';
     uint8 public constant decimals = 18;
     uint  public totalSupply;
     mapping(address => uint) public balanceOf;
@@ -224,13 +201,7 @@ contract BlackbullERC20 is IBlackbullERC20 {
     }
 }
 
-
-// File contracts/blackbull-core/libraries/Math.sol
-
-pragma solidity =0.5.16;
-
 // a library for performing various math operations
-
 library Math {
     function min(uint x, uint y) internal pure returns (uint z) {
         z = x < y ? x : y;
@@ -251,16 +222,9 @@ library Math {
     }
 }
 
-
-// File contracts/blackbull-core/libraries/UQ112x112.sol
-
-pragma solidity =0.5.16;
-
 // a library for handling binary fixed point numbers (https://en.wikipedia.org/wiki/Q_(number_format))
-
 // range: [0, 2**112 - 1]
 // resolution: 1 / 2**112
-
 library UQ112x112 {
     uint224 constant Q112 = 2**112;
 
@@ -274,11 +238,6 @@ library UQ112x112 {
         z = x / uint224(y);
     }
 }
-
-
-// File contracts/blackbull-core/interfaces/IERC20.sol
-
-pragma solidity >=0.5.0;
 
 interface IERC20 {
     event Approval(address indexed owner, address indexed spender, uint value);
@@ -296,25 +255,9 @@ interface IERC20 {
     function transferFrom(address from, address to, uint value) external returns (bool);
 }
 
-
-// File contracts/blackbull-core/interfaces/IBlackbullCallee.sol
-
-pragma solidity >=0.5.0;
-
 interface IBlackbullCallee {
-    function blackbullCall(address sender, uint amount0, uint amount1, bytes calldata data) external;
+    function pantherCall(address sender, uint amount0, uint amount1, bytes calldata data) external;
 }
-
-
-// File contracts/blackbull-core/BlackbullPair.sol
-
-pragma solidity =0.5.16;
-
-
-
-
-
-
 
 contract BlackbullPair is IBlackbullPair, BlackbullERC20 {
     using SafeMath  for uint;
@@ -404,7 +347,7 @@ contract BlackbullPair is IBlackbullPair, BlackbullERC20 {
                 uint rootKLast = Math.sqrt(_kLast);
                 if (rootK > rootKLast) {
                     uint numerator = totalSupply.mul(rootK.sub(rootKLast));
-                    uint denominator = rootK.mul(5).add(rootKLast);
+                    uint denominator = rootK.mul(3).add(rootKLast);
                     uint liquidity = numerator / denominator;
                     if (liquidity > 0) _mint(feeTo, liquidity);
                 }
@@ -477,7 +420,7 @@ contract BlackbullPair is IBlackbullPair, BlackbullERC20 {
         require(to != _token0 && to != _token1, 'Blackbull: INVALID_TO');
         if (amount0Out > 0) _safeTransfer(_token0, to, amount0Out); // optimistically transfer tokens
         if (amount1Out > 0) _safeTransfer(_token1, to, amount1Out); // optimistically transfer tokens
-        if (data.length > 0) IBlackbullCallee(to).blackbullCall(msg.sender, amount0Out, amount1Out, data);
+        if (data.length > 0) IBlackbullCallee(to).pantherCall(msg.sender, amount0Out, amount1Out, data);
         balance0 = IERC20(_token0).balanceOf(address(this));
         balance1 = IERC20(_token1).balanceOf(address(this));
         }
@@ -485,8 +428,8 @@ contract BlackbullPair is IBlackbullPair, BlackbullERC20 {
         uint amount1In = balance1 > _reserve1 - amount1Out ? balance1 - (_reserve1 - amount1Out) : 0;
         require(amount0In > 0 || amount1In > 0, 'Blackbull: INSUFFICIENT_INPUT_AMOUNT');
         { // scope for reserve{0,1}Adjusted, avoids stack too deep errors
-        uint balance0Adjusted = balance0.mul(1000).sub(amount0In.mul(3));
-        uint balance1Adjusted = balance1.mul(1000).sub(amount1In.mul(3));
+        uint balance0Adjusted = balance0.mul(1000).sub(amount0In.mul(2));
+        uint balance1Adjusted = balance1.mul(1000).sub(amount1In.mul(2));
         require(balance0Adjusted.mul(balance1Adjusted) >= uint(_reserve0).mul(_reserve1).mul(1000**2), 'Blackbull: K');
         }
 
@@ -508,14 +451,9 @@ contract BlackbullPair is IBlackbullPair, BlackbullERC20 {
     }
 }
 
-
-// File contracts/blackbull-core/BlackbullFactory.sol
-
-pragma solidity =0.5.16;
-
-
 contract BlackbullFactory is IBlackbullFactory {
     bytes32 public constant INIT_CODE_PAIR_HASH = keccak256(abi.encodePacked(type(BlackbullPair).creationCode));
+
     address public feeTo;
     address public feeToSetter;
 
